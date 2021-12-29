@@ -5,6 +5,7 @@
     "publishConfig": {
         "access": "public"
     },
+    "keywords": ["kv", "key value", "mongodb", "cli"],
     "bin": {
         "kv": "./dist/index.mjs"
     },
