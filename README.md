@@ -1,22 +1,82 @@
-# lib-ts-starter
+# @qgisk/kv-cli
 
-[![npm version](https://badgen.net/npm/v/lib-ts-starter)](https://npm.im/lib-ts-starter) [![npm downloads](https://badgen.net/npm/dm/lib-ts-starter)](https://npm.im/lib-ts-starter)
-
-## Using this template
-
--   Search `lib-ts-starter` and replace it with your custom package name.
--   Search `QGIsK` and replace it with your name.
-
-Features:
-
--   Package manager [pnpm](https://pnpm.js.org/), safe and fast
--   Bundle with [tsup](https://github.com/egoist/tsup)
--   Test with [ava](https://github.com/ava/ava)
+[![npm version](https://badgen.net/npm/v/@qgisk/kv-cli)](https://npm.im/@qgisk/kv-cli) [![npm downloads](https://badgen.net/npm/dm/@qgisk/kv-cli)](https://npm.im/@qgisk/kv-cli)
 
 ## Install
 
 ```bash
-npm i @qgisk/lib-ts-starter
+npm i @qgisk/kv-cli
 ```
 
-[MIT](https://github.com/QGIsK/lib-ts-starter/blob/main/LICENSE) Demian
+# KV Cli
+
+KV has a simple cli for most commands (everything but all)
+
+## Installation
+
+```bash
+npm i -g @qgisk/kv
+```
+
+## Help
+
+```bash
+kv --help
+```
+
+### For specific commands
+
+```bash
+kv get -h # or --help
+```
+
+## Settings
+
+Default settings
+
+```json
+{
+    "db": {
+        "uri": "mongodb://localhost:27017/kv"
+    },
+    "namespace": "kv"
+}
+```
+
+### Updating settings
+
+```bash
+kv settings --uri <your uri: string> --namespace <namespace: string>
+```
+
+## Setting a value
+
+Supports multi word values
+
+```
+kv set [key] [value] --namespace <optional> --ttl [number (in ms)] <optional>
+```
+
+## Getting a value
+
+```
+kv get [key] --namespace <optional>
+```
+
+## Deleting a value
+
+```
+kv delete [key] --namespace <optional>
+```
+
+## Clearing a namespace
+
+```
+kv clear --namespace <optional>
+```
+
+## Coming soon / To do
+
+-   Tests for the cli
+
+[MIT](https://github.com/QGIsK/@qgisk/kv-cli/blob/main/LICENSE) Demian

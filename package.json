@@ -1,24 +1,22 @@
 {
-    "name": "@qgisk/lib-ts-starter",
+    "name": "@qgisk/kv-cli",
     "version": "0.0.1",
-    "description": "Library Starter for TS",
+    "description": "CLI for kv",
     "publishConfig": {
         "access": "public"
     },
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "exports": {
-        "require": "./dist/index.js",
-        "import": "./dist/index.mjs"
+    "bin": {
+        "kv": "./dist/index.mjs"
     },
     "files": [
         "dist"
     ],
     "scripts": {
-        "build-fast": "rm -rf dist && tsup lib/index.ts lib/helpers --format cjs,esm --target node14 --minify",
+        "build-fast": "rm -rf dist && tsup lib --format esm --target node14 --minify",
+        "build-test": "rm -rf dist && tsup lib --format cjs --target node14",
         "build": "pnpm run build-fast -- --dts-resolve",
         "prepublishOnly": "npm run build",
-        "test": "pnpm run build && pnpm run test-only",
+        "test": "pnpm run build-test && pnpm run test-only",
         "test-only": "ava test/*.test.ts --fail-fast --timeout 60s",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
@@ -60,12 +58,18 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/QGIsK/lib-ts-starter.git"
+        "url": "git+https://github.com/QGIsK/kv-cli.git"
     },
     "author": "Demian <QGIsK> (https://github.com/qgisk)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/QGIsK/lib-ts-starter/issues"
+        "url": "https://github.com/QGIsK/kv-cli/issues"
     },
-    "homepage": "https://github.com/QGIsK/lib-ts-starter#readme"
+    "homepage": "https://github.com/QGIsK/kv-cli#readme",
+    "dependencies": {
+        "@qgisk/kv": "0.0.8",
+        "cac": "^6.7.12",
+        "configstore": "^6.0.0",
+        "mongoose": "^6.1.4"
+    }
 }
