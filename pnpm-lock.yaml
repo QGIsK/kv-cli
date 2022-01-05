@@ -4,7 +4,7 @@ specifiers:
   '@ava/typescript': ^3.0.1
   '@commitlint/cli': ^15.0.0
   '@commitlint/config-conventional': ^15.0.0
-  '@qgisk/kv': 0.0.8
+  '@qgisk/kv': 0.0.9
   '@qgisk/prettier-config': ^0.0.1
   '@typescript-eslint/parser': ^5.6.0
   ava: ^3.15.0
@@ -24,7 +24,7 @@ specifiers:
   typescript: ^4.5.3
 
 dependencies:
-  '@qgisk/kv': 0.0.8_mongoose@6.1.4
+  '@qgisk/kv': 0.0.9_mongoose@6.1.4
   cac: 6.7.12
   configstore: 6.0.0
   mongoose: 6.1.4
@@ -306,8 +306,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@qgisk/kv/0.0.8_mongoose@6.1.4:
-    resolution: {integrity: sha512-noE0kbNidSbKpFWNEQdbFN0BQf0qe7Sro4+R7qJRVNfFntFY4uMsn/RKm0BHdxUbJ9AaYoSC7InhE98SeqwNtw==}
+  /@qgisk/kv/0.0.9_mongoose@6.1.4:
+    resolution: {integrity: sha512-9J1Q5iVtISdWqpsDcMaaN/yf/DBzgIX5wSj2FQFvTdjaZZm/G/72PuOsrxK2AgfVBqKp0HJGK47WYVJoqoBwVQ==}
     peerDependencies:
       mongoose: '>=6'
     dependencies:
