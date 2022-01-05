@@ -68,7 +68,7 @@
     },
     "homepage": "https://github.com/QGIsK/kv-cli#readme",
     "dependencies": {
-        "@qgisk/kv": "0.0.8",
+        "@qgisk/kv": "0.0.9",
         "cac": "^6.7.12",
         "configstore": "^6.0.0",
         "mongoose": "^6.1.4"
