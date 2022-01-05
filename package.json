@@ -1,11 +1,16 @@
 {
     "name": "@qgisk/kv-cli",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "CLI for kv",
     "publishConfig": {
         "access": "public"
     },
-    "keywords": ["kv", "key value", "mongodb", "cli"],
+    "keywords": [
+        "kv",
+        "key value",
+        "mongodb",
+        "cli"
+    ],
     "bin": {
         "kv": "./dist/index.mjs"
     },
